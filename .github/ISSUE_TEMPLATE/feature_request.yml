@@ -1,0 +1,38 @@
+name: Feature Request
+description: Suggest an idea or architectural improvement for RepoSense AI
+title: "[FEAT]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for proposing a feature! Please specify which development phase your feature aligns with (Phase 2: Core Development or Phase 3: Release/Testing).
+  - type: dropdown
+    id: phase
+    attributes:
+      label: Target Development Phase
+      description: Select which phase this feature proposal belongs to.
+      options:
+        - "Phase 2: Core Development (Ingestion, AST, Graphs, Search, AI)"
+        - "Phase 3: Testing & Release (E2E Tests, Docker, Optimization)"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What developer friction or architectural problem does this feature solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Solution
+      description: Describe the technical implementation or user experience you propose.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Any alternative designs or libraries you evaluated.

@@ -1,0 +1,48 @@
+name: Bug Report
+description: Create a report to help us improve RepoSense AI
+title: "[BUG]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a bug! Please ensure this report does not contain sensitive tokens, credentials, or private repository URLs.
+  - type: input
+    id: environment
+    attributes:
+      label: Operating System & Environment
+      description: OS version, Python version, Node.js version, browser.
+      placeholder: "Windows 11 / Python 3.14 / Node 24.13 / Chrome"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Exact commands or actions taken to reproduce the issue.
+      placeholder: |
+        1. Start backend: uvicorn app.main:app
+        2. Start frontend: npm run dev
+        3. Observe error...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error Logs or Terminal Output
+      description: Paste relevant logs here (ensure sensitive keys/tokens are removed).
+      render: shell
